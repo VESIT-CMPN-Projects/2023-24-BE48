@@ -9,6 +9,7 @@ let { getContract, getClients } = require("./routes/store.js");
 const path = require("path");
 
 const app = express();
+
 const PORT = Number(process.env.PORT) || 4000;
 const SECRET_KEY = process.env.SESSION_SECRET || "secret";
 const IP_ADDRESS = process.env.IP_ADDRESS || "localhost";
