@@ -1,0 +1,18 @@
+# Sample Apps for testing
+Application_*/
+
+# Functions that might be needed
+functions.txt
+**/functions.txt
+
+# node modules
+**/node_modules
+
+# package-lock.json files
+**/package-lock.json
+
+# wallets
+backend/routes/fabric_functions/wallet
+
+# build
+frontend/build

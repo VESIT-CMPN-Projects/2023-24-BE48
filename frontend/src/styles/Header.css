@@ -1,0 +1,57 @@
+header {
+    height: 9vh;
+    width: 100vw;
+    padding: 0 30px;
+    background-color: #3e3c61;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.logo-root{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.logo-left{
+    width: 40%;
+    height: 85%;
+    /* padding: ;  */
+}
+/* 
+.logo-right{
+  width: 30%;
+  height: 85%;
+} */
+
+/* Header.css */
+.header-button {
+  background-color: #3e3c61;
+  color: #ffffff;
+  border: none;
+  padding: 12px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 7%;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.create-room-button {
+  background-color: #5d5b8d;
+}
+
+.join-new-room-button {
+  background-color: #5d5b8d;
+}
+
+.header-button:last-child {
+  margin-right: 0;
+}
