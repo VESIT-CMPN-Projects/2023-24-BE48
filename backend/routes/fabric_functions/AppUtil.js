@@ -12,14 +12,6 @@ const path = require("path");
 exports.buildCCPOrg = (orgUserId) => {
   // load the common connection configuration file
 
-  let orgPath;
-
-  if (orgUserId === "User1") {
-    orgPath = "org1";
-  } else {
-    orgPath = "org2";
-  }
-
   const ccpPath = path.resolve(
     __dirname,
     "..",
@@ -29,8 +21,8 @@ exports.buildCCPOrg = (orgUserId) => {
     "test-network",
     "organizations",
     "peerOrganizations",
-    orgPath + ".example.com",
-    "connection-" + orgPath + ".json"
+    orgUserId + ".example.com",
+    "connection-" + orgUserId + ".json"
   );
   const fileExists = fs.existsSync(ccpPath);
   if (!fileExists) {

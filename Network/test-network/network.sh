@@ -318,6 +318,10 @@ function deployCCAAS() {
 # Tear down running network
 function networkDown() {
 
+  # remove wallet
+  echo "Removing the wallet created at /backend/fabric_functions/wallet."
+  rm -rf ../../backend/routes/fabric_functions/wallet
+
   COMPOSE_BASE_FILES="-f compose/${COMPOSE_FILE_BASE} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_BASE}"
   COMPOSE_COUCH_FILES="-f compose/${COMPOSE_FILE_COUCH} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_COUCH}"
   COMPOSE_CA_FILES="-f compose/${COMPOSE_FILE_CA} -f compose/${CONTAINER_CLI}/${CONTAINER_CLI}-${COMPOSE_FILE_CA}"

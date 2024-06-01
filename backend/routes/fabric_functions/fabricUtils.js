@@ -17,6 +17,7 @@ const { buildCCPOrg, buildWallet } = require("./AppUtil");
 
 const channelName = process.env.CHANNEL_NAME || "mychannel";
 const chaincodeName = process.env.CHAINCODE_NAME || "basic";
+const orgUserId = process.env.ORG_USER_ID || "org1";
 
 let gateway;
 
@@ -24,10 +25,9 @@ const initialize = async () => {
   const walletPath = path.join(__dirname, "wallet");
 
   try {
-    const mspOrg = `Org1MSP`;
-    const orgUserId = `User1`;
-    const caHostName = `ca.org1.example.com`;
-    const affiliation = `org1.department1`;
+    const mspOrg = `${orgUserId}MSP`;
+    const caHostName = `ca.${orgUserId}.example.com`;
+    const affiliation = `${orgUserId}.department1`;
 
     const ccp = buildCCPOrg(orgUserId);
 
